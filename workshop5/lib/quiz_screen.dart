@@ -25,7 +25,7 @@ class _QuizState extends State<QuizScreen> {
       } else {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => resultScreen()),
+          MaterialPageRoute(builder: (context) => resultScreen(answers)),
         );
       }
     });
