@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
 class resultScreen extends StatelessWidget {
-  resultScreen(this.answers, {super.key});
+  resultScreen(this.answers, this.correctAnswer, {super.key});
   late List<String> answers;
+  late int correctAnswer;
 
   @override
   Widget build(BuildContext context) {
@@ -25,14 +26,15 @@ class resultScreen extends StatelessWidget {
               "assets/images/quiz-logo.png",
               width: 240,
             ),
-            const Text(
-              "-Your Answers-",
+            Text(
+              'Correct Answers : $correctAnswer',
               style: TextStyle(
                   color: Colors.red,
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 1.5),
             ),
+
             ...answers.map((e) => Text(
                   e,
                   style: TextStyle(

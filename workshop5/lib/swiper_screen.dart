@@ -19,12 +19,6 @@ class _SwiperScreenState extends State<SwiperScreen> {
     });
   }
 
-  void goToResult() {
-    setState(() {
-      activeScreenName = "result-screen";
-    });
-  }
-
   // StatefullWidget setState her yapıldığında build fonksiyonunu yeniden çalıştırır.
   @override
   Widget build(BuildContext context) {
