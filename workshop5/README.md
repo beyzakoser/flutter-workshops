@@ -1,7 +1,8 @@
 
 <img src="https://github.com/beyzakoser/flutter-workshops/blob/main/workshop5/img/homePage.png" width="150" height="280">
-![questionPage](https://github.com/beyzakoser/flutter-workshops/blob/main/workshop5/img/questionPage.png)
-![resultPage](https://github.com/beyzakoser/flutter-workshops/blob/main/workshop5/img/resultPage.png)
+<img src="https://github.com/beyzakoser/flutter-workshops/blob/main/workshop5/img/questionPage.png" width="200" height="380">
+<img src="https://github.com/beyzakoser/flutter-workshops/blob/main/workshop5/img/resultPage.png" width="250" height="400">
+
 
 
 # introapp
