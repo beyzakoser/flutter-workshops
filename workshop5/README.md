@@ -1,4 +1,4 @@
-![homePage](https://github.com/beyzakoser/flutter-workshops/blob/main/workshop5/img/homePage.png =50x50)
+![homePage](https://github.com/beyzakoser/flutter-workshops/blob/main/workshop5/img/homePage.png=150x100)
 ![questionPage](https://github.com/beyzakoser/flutter-workshops/blob/main/workshop5/img/questionPage.png)
 ![resultPage](https://github.com/beyzakoser/flutter-workshops/blob/main/workshop5/img/resultPage.png)
 
