@@ -37,54 +37,54 @@ const questions = [
         "MYSQL",
       ],
       "Firebase Database"),
-  // QuestionModel(
-  //     "5 - Does flutter support desktop application development?",
-  //     [
-  //       "Yes",
-  //       "No",
-  //     ],
-  //     "Yes"),
-  // QuestionModel(
-  //     "6 - Which element is used as an identifier in Flutter?",
-  //     [
-  //       "Serial",
-  //       "Widgets",
-  //       "Keys",
-  //       "All of the above",
-  //     ],
-  //     "Keys"),
-  // QuestionModel(
-  //     "7 - Which of the following widget is used for repeating content in Flutter?",
-  //     [
-  //       "ListView",
-  //       "ArrayView",
-  //       "ExpandedView",
-  //       "None of the above",
-  //     ],
-  //     "ListView"),
-  // QuestionModel(
-  //     "8 - Flutter’s rendering engine is primarily written in which programming language?",
-  //     [
-  //       "Java",
-  //       "C++",
-  //       "Google Dart",
-  //       "C#",
-  //     ],
-  //     "C++"),
-  // QuestionModel(
-  //     "9 - Everything is a widget in Flutter. True or False?",
-  //     [
-  //       "True",
-  //       "False",
-  //     ],
-  //     "True"),
-  // QuestionModel(
-  //     "10 - Which of the following option is used to represent a collection of objects in Dart?",
-  //     [
-  //       "String",
-  //       "Numbers ",
-  //       "Booleans",
-  //       "Lists and Maps",
-  //     ],
-  //     "Lists and Maps"),
+  QuestionModel(
+      "5 - Does flutter support desktop application development?",
+      [
+        "Yes",
+        "No",
+      ],
+      "Yes"),
+  QuestionModel(
+      "6 - Which element is used as an identifier in Flutter?",
+      [
+        "Serial",
+        "Widgets",
+        "Keys",
+        "All of the above",
+      ],
+      "Keys"),
+  QuestionModel(
+      "7 - Which of the following widget is used for repeating content in Flutter?",
+      [
+        "ListView",
+        "ArrayView",
+        "ExpandedView",
+        "None of the above",
+      ],
+      "ListView"),
+  QuestionModel(
+      "8 - Flutter’s rendering engine is primarily written in which programming language?",
+      [
+        "Java",
+        "C++",
+        "Google Dart",
+        "C#",
+      ],
+      "C++"),
+  QuestionModel(
+      "9 - Everything is a widget in Flutter. True or False?",
+      [
+        "True",
+        "False",
+      ],
+      "True"),
+  QuestionModel(
+      "10 - Which of the following option is used to represent a collection of objects in Dart?",
+      [
+        "String",
+        "Numbers ",
+        "Booleans",
+        "Lists and Maps",
+      ],
+      "Lists and Maps"),
 ];

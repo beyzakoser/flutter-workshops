@@ -14,16 +14,20 @@ class QuizScreen extends StatefulWidget {
 // navigator
 class _QuizState extends State<QuizScreen> {
   int selectedQuestionIndex = 0;
-  int correctAnswer = 0;
+  int correctAnswerNumber = 0;
   String playerAnswer = "";
   List<String> answers = [];
+  List<String> correctAnswers = [];
 
   void changeQuestion(String playerAnswer) {
     setState(() {
       answers.add(playerAnswer); //kullanıcı cevaplarını listeye ekledim
       if (questions[selectedQuestionIndex].correctAnswer == playerAnswer) {
         //kullanıcı cevaplarıyla doğru cevabı karşılaştırıp doğruysa artırdım
-        correctAnswer++;
+        correctAnswerNumber++;
+        correctAnswers.add(
+            playerAnswer); //doğru cevapları ayrı bir listede tuttum result screen de renklerini yeşil yapmak için
+        print(correctAnswers);
       }
       if (questions.length - 1 > selectedQuestionIndex) {
         selectedQuestionIndex++;
@@ -32,7 +36,8 @@ class _QuizState extends State<QuizScreen> {
         Navigator.push(
           context,
           MaterialPageRoute(
-              builder: (context) => resultScreen(answers, correctAnswer)),
+              builder: (context) =>
+                  resultScreen(answers, correctAnswers, correctAnswerNumber)),
         );
       }
     });
