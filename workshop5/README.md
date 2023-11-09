@@ -1,7 +1,7 @@
 
 <p align="middle">
-<img src="https://github.com/beyzakoser/flutter-workshops/blob/main/workshop5/img/homePage.png" width="250" height="380">
-<img src="https://github.com/beyzakoser/flutter-workshops/blob/main/workshop5/img/questionPage.png" width="250" height="400">
+<img src="https://github.com/beyzakoser/flutter-workshops/blob/main/workshop5/img/homePage.png" width="250" height="450">
+<img src="https://github.com/beyzakoser/flutter-workshops/blob/main/workshop5/img/questionPage.png" width="250" height="450">
 <img src="https://github.com/beyzakoser/flutter-workshops/blob/main/workshop5/img/resultPage.png" width="250" height="450">
 </p>
 
