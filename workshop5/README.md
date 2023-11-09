@@ -1,7 +1,9 @@
 
+<p align="center">
 <img src="https://github.com/beyzakoser/flutter-workshops/blob/main/workshop5/img/homePage.png" width="200" height="350">
 <img src="https://github.com/beyzakoser/flutter-workshops/blob/main/workshop5/img/questionPage.png" width="200" height="350">
 <img src="https://github.com/beyzakoser/flutter-workshops/blob/main/workshop5/img/resultPage.png" width="200" height="350">
+</p>
 
 
 
