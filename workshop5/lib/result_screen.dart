@@ -29,7 +29,7 @@ class resultScreen extends StatelessWidget {
               width: 240,
             ),
             Text(
-              'Correct Answers : $correctAnswerNumber', //doğru cevap sayısı
+              'Scor : $correctAnswerNumber', //doğru cevap sayısı
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 30,
@@ -39,6 +39,7 @@ class resultScreen extends StatelessWidget {
 
             ...answers.map((e) {
               if (correctAnswers.contains(e)) {
+                //eğer kullanıcıdan gelen cevap ile doğru cevap eşleşiyorsa
                 return Text(
                   //doğru cevaplar yeşil olarak ekrana yazıldı
                   e,
