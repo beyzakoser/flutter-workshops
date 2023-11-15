@@ -1,3 +1,6 @@
+Ödev 9.11.2023
+Uygulamanıza bir adet + iconu ve ExpenseApp title'ı içeren Topbar ekleyiniz.
+
 <img src="https://github.com/beyzakoser/flutter-workshops/blob/main/workshop6/expenseapp/img/screen.png" width="250" height="480">
 # expenseapp
 
