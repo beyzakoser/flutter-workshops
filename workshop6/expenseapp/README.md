@@ -1,4 +1,4 @@
-<img src="https://github.com/beyzakoser/flutter-workshops/blob/main/workshop6/img/screen.png" width="250" height="480">
+<img src="https://github.com/beyzakoser/flutter-workshops/blob/main/workshop6/expenseapp/img/screen.png" width="250" height="480">
 # expenseapp
 
 A new Flutter project.
