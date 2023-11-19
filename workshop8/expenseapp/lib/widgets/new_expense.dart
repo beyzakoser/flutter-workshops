@@ -1,4 +1,5 @@
 import 'package:expenseapp/models/expense.dart';
+import 'package:expenseapp/pages/main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -14,6 +15,7 @@ class _NewExpenseState extends State<NewExpense> {
   var _expensePriceController = TextEditingController();
   DateTime? _selectedDate;
   Category _selectedCategory = Category.work;
+  List<Expense> addexpenses = [];
 
   void _openDatePicker() async {
     DateTime today = DateTime.now(); // 16.11.2023
@@ -108,6 +110,16 @@ class _NewExpenseState extends State<NewExpense> {
               ),
               ElevatedButton(
                   onPressed: () {
+                    //addexpenses adındaki listeye ekledim eklenen harcama bilgilerini
+                    //bu listeyi main_page sayfasına göndereceğim
+                    addexpenses.add(Expense(
+                        name: _expenseNameController.text,
+                        price: double.parse(_expensePriceController.text),
+                        date: _selectedDate!,
+                        category: _selectedCategory));
+
+                    print(
+                        "liste name:${_expenseNameController.text} price: ${double.parse(_expensePriceController.text)} date: ${_selectedDate} cat: ${_selectedCategory}");
                     print(
                         "Kaydedilen değer: ${_expenseNameController.text} ${_expensePriceController.text} ${DateFormat.yMd().format(_selectedDate!)} ${_selectedCategory.name}");
                   },

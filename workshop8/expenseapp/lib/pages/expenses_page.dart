@@ -5,7 +5,9 @@ import 'package:expenseapp/widgets/expense_item.dart';
 import 'package:flutter/material.dart';
 
 class ExpensesPage extends StatefulWidget {
-  const ExpensesPage({Key? key}) : super(key: key);
+  //const ExpensesPage({Key? key}) : super(key: key);
+  ExpensesPage({required this.newexpenses});
+  List<Expense> newexpenses;
 
   @override
   _ExpensesPageState createState() => _ExpensesPageState();
@@ -14,23 +16,6 @@ class ExpensesPage extends StatefulWidget {
 class _ExpensesPageState extends State<ExpensesPage> {
   // callback fonksiyon
   // setState'i unutmayalım..
-  List<Expense> expenses = [
-    Expense(
-        name: "Yemek",
-        price: 500.529,
-        date: DateTime.now(),
-        category: Category.food),
-    Expense(
-        name: "Udemy Kursu",
-        price: 200,
-        date: DateTime.now(),
-        category: Category.work),
-    Expense(
-        name: "Faturalar",
-        price: 200,
-        date: DateTime.now(),
-        category: Category.travel),
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -42,9 +27,9 @@ class _ExpensesPageState extends State<ExpensesPage> {
         ),
         Expanded(
           child: ListView.builder(
-              itemCount: expenses.length,
+              itemCount: widget.newexpenses.length,
               itemBuilder: (context, index) {
-                return ExpenseItem(expenses[index]);
+                return ExpenseItem(widget.newexpenses[index]);
               }),
         ),
         const SizedBox(
