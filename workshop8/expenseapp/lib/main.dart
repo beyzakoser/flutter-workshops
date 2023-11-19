@@ -5,6 +5,5 @@ import 'package:flutter/material.dart';
 //Expense ekleme dialog'unda kaydet butonunun form valid olduğu durumda veriler arasına yeni veriyi ekleme işlemini handle ediniz.
 
 void main() {
-  runApp(MaterialApp(
-      theme: ThemeData(useMaterial3: true), home: const MainPage()));
+  runApp(MaterialApp(theme: ThemeData(useMaterial3: true), home: MainPage()));
 }
