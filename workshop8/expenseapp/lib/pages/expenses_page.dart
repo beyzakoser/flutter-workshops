@@ -25,6 +25,11 @@ class _ExpensesPageState extends State<ExpensesPage> {
         price: 200,
         date: DateTime.now(),
         category: Category.work),
+    Expense(
+        name: "Faturalar",
+        price: 200,
+        date: DateTime.now(),
+        category: Category.travel),
   ];
 
   @override
