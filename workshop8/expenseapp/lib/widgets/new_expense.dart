@@ -4,8 +4,8 @@ import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 
 class NewExpense extends StatefulWidget {
-  const NewExpense({Key? key}) : super(key: key);
-
+  const NewExpense(this.callbackFunction, {Key? key}) : super(key: key);
+  final void Function(Expense expense) callbackFunction;
   @override
   _NewExpenseState createState() => _NewExpenseState();
 }
@@ -131,12 +131,18 @@ class _NewExpenseState extends State<NewExpense> {
                     } else {
                       setState(() {
                         //yeni harcamayı listeye ekledim
-                        addexpenses.add(Expense(
+                        // addexpenses.add(Expense(
+                        //     name: _expenseNameController.text,
+                        //     price: double.parse(_expensePriceController.text),
+                        //     date: _selectedDate!,
+                        //     category: _selectedCategory));
+                        Expense expense = Expense(
                             name: _expenseNameController.text,
                             price: double.parse(_expensePriceController.text),
                             date: _selectedDate!,
-                            category: _selectedCategory));
-
+                            category: _selectedCategory);
+                        widget.callbackFunction(expense);
+                        Navigator.pop(context);
                         //Her ekle butonuna basıldığında alanları boşalttım
                         _expenseNameController.text = "";
                         _expensePriceController.text = "";
