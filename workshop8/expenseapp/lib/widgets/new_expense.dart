@@ -1,6 +1,6 @@
 import 'package:expenseapp/models/expense.dart';
-import 'package:expenseapp/pages/main_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:intl/intl.dart';
 
 class NewExpense extends StatefulWidget {
@@ -21,16 +21,6 @@ class _NewExpenseState extends State<NewExpense> {
     DateTime today = DateTime.now(); // 16.11.2023
 
     DateTime oneYearAgo = DateTime(today.year - 1, today.month, today.day);
-    // showDatePicker(
-    //         context: context,
-    //         initialDate: today,
-    //         firstDate: oneYearAgo,
-    //         lastDate: today)
-    // .then((value) {
-    //   async işlemden cevap ne zaman gelirse bu bloğu çalıştır..
-    //   print(value);
-    // });
-    // async function => await etmek
 
     DateTime? selectedDate = await showDatePicker(
         context: context,
@@ -41,6 +31,7 @@ class _NewExpenseState extends State<NewExpense> {
       _selectedDate = selectedDate;
     });
     print("Merhaba");
+
     // sync => bir satır çalışmasını bitirmeden alt satıra geçemez.
     // async => async olan satır sadece tetiklenir kod aşağıya doğru çalışmaya devam eder
   }
@@ -50,12 +41,12 @@ class _NewExpenseState extends State<NewExpense> {
     return Container(
       width: double.infinity,
       child: Padding(
-        padding: EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(12.0),
         child: Column(children: [
           TextField(
             controller: _expenseNameController,
             maxLength: 50,
-            decoration: InputDecoration(labelText: "Harcama Adı"),
+            decoration: const InputDecoration(labelText: "Harcama Adı"),
           ),
           Row(
             children: [
@@ -63,6 +54,10 @@ class _NewExpenseState extends State<NewExpense> {
                 child: TextField(
                   controller: _expensePriceController,
                   keyboardType: TextInputType.number,
+                  inputFormatters: <TextInputFormatter>[
+                    FilteringTextInputFormatter
+                        .digitsOnly, //sadece sayı girişi yapılabilecek
+                  ],
                   decoration: const InputDecoration(
                       labelText: "Harcama Miktarı", prefixText: "₺"),
                 ),
@@ -110,20 +105,49 @@ class _NewExpenseState extends State<NewExpense> {
               ),
               ElevatedButton(
                   onPressed: () {
-                    //addexpenses adındaki listeye ekledim eklenen harcama bilgilerini
-                    //bu listeyi main_page sayfasına göndereceğim
-                    addexpenses.add(Expense(
-                        name: _expenseNameController.text,
-                        price: double.parse(_expensePriceController.text),
-                        date: _selectedDate!,
-                        category: _selectedCategory));
+                    if (_selectedDate == null ||
+                        _expenseNameController.text.isEmpty ||
+                        _expensePriceController.text.isEmpty) {
+                      //boş alan bırakıldıysa alert göster
+                      AlertDialog alert = AlertDialog(
+                        title: const Text("Uyarı"),
+                        content: const Text("Lütfen boş alan bırakmayınız."),
+                        actions: [
+                          TextButton(
+                            child: const Text("Tamam"),
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                          ),
+                        ],
+                      );
 
-                    print(
-                        "liste name:${_expenseNameController.text} price: ${double.parse(_expensePriceController.text)} date: ${_selectedDate} cat: ${_selectedCategory}");
-                    print(
-                        "Kaydedilen değer: ${_expenseNameController.text} ${_expensePriceController.text} ${DateFormat.yMd().format(_selectedDate!)} ${_selectedCategory.name}");
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return alert;
+                        },
+                      );
+                    } else {
+                      setState(() {
+                        //yeni harcamayı listeye ekledim
+                        addexpenses.add(Expense(
+                            name: _expenseNameController.text,
+                            price: double.parse(_expensePriceController.text),
+                            date: _selectedDate!,
+                            category: _selectedCategory));
+
+                        //Her ekle butonuna basıldığında alanları boşalttım
+                        _expenseNameController.text = "";
+                        _expensePriceController.text = "";
+                        _selectedDate = DateTime.now();
+
+                        print(
+                            "liste: ${addexpenses.map((e) => e.name)}"); //listeyi görmek için
+                      });
+                    }
                   },
-                  child: Text("Ekle")),
+                  child: const Text("Ekle")),
             ],
           ),
         ]),
