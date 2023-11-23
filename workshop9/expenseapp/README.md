@@ -1,6 +1,12 @@
-Workshop 16.11.2023
+Workshop 21.11.2023
 
-Expense ekleme dialog'unda kaydet butonunun form valid olduğu durumda veriler arasına yeni veriyi ekleme işlemini handle ediniz.
+<p align="middle">
+
+<img src="https://github.com/beyzakoser/flutter-workshops/blob/main/workshop9/expenseapp/img/img1.png" width="250" height="480">
+<img src="https://github.com/beyzakoser/flutter-workshops/blob/main/workshop9/expenseapp/img/img2.png" width="250" height="480">
+<img src="https://github.com/beyzakoser/flutter-workshops/blob/main/workshop9/expenseapp/img/img3.png" width="250" height="480">
+
+</p>
 
 # expenseapp
 
