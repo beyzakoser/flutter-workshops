@@ -22,6 +22,21 @@ class _MainPageState extends State<MainPage> {
         price: 200,
         date: DateTime.now(),
         category: Category.work),
+    Expense(
+        name: "Market",
+        price: 150,
+        date: DateTime.now(),
+        category: Category.shopping),
+    Expense(
+        name: "Sağlık",
+        price: 250,
+        date: DateTime.now(),
+        category: Category.health),
+    Expense(
+        name: "Diğer",
+        price: 350,
+        date: DateTime.now(),
+        category: Category.other),
   ];
   late int temporaryIndexNo;
   late Expense temporaryExpense;
@@ -67,6 +82,43 @@ class _MainPageState extends State<MainPage> {
               },
               icon: const Icon(Icons.add))
         ],
+      ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(
+              child: Text(
+                'Kategoriler',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.home),
+              title: const Text('Ana Sayfa',
+                  style: TextStyle(color: Colors.white)),
+              onTap: () {
+                // Ana sayfaya yönlendirme işlemleri burada yapılabilir.
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.settings),
+              title: const Text('Ayarlar',
+                  style: TextStyle(
+                    color: Colors.white,
+                  )),
+              onTap: () {
+                // Ayarlar sayfasına yönlendirme işlemleri burada yapılabilir.
+                Navigator.pop(context);
+              },
+            ),
+            // İstenilen kadar başlık eklenebilir.
+          ],
+        ),
       ),
       body: ExpensesPage(expenses, removeExpense, undo),
     );

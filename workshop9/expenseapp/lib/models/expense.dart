@@ -28,10 +28,20 @@ class Expense {
   final double price;
   final DateTime date;
   final Category category;
-  // belirli kategoriler
-  // enum
 }
 
-// int,long => 1,2,3,4,5,99999999
+class CategoryExpenses {
+  const CategoryExpenses({required this.category, required this.expenses});
+  final Category category;
+  final List<Expense> expenses;
 
-// String => 2c7cf20e-5dbb-41ad-a9d0-124635f347ef, d1b6ee05-73c0-4924-9ed7-f3b2e50ee0a9
+  double get totalCategoryPrice {
+    double sum = 0;
+
+    expenses.forEach((expense) {
+      sum += expense.price;
+    });
+
+    return sum;
+  }
+}

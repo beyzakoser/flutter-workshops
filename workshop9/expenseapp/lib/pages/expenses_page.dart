@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:expenseapp/models/expense.dart';
+import 'package:expenseapp/widgets/chart.dart';
 import 'package:expenseapp/widgets/expense_item.dart';
 import 'package:flutter/material.dart';
 
@@ -20,9 +21,9 @@ class _ExpensesPageState extends State<ExpensesPage> {
   Widget build(BuildContext context) {
     return Center(
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        const SizedBox(
+        SizedBox(
           height: 150,
-          child: Text("Grafik Bölümü"),
+          child: Chart(allExpenses: widget.expenses),
         ),
         Expanded(
           child: ListView.builder(
@@ -47,10 +48,6 @@ class _ExpensesPageState extends State<ExpensesPage> {
                 );
               }),
         ),
-        const SizedBox(
-          height: 150,
-          child: Text("Burası bottom bar."),
-        )
       ]),
     );
   }
