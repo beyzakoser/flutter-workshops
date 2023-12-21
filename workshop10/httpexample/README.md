@@ -2,4 +2,4 @@
 
 Projedeki http isteğinden gelen cevabın bir dart modeline aktarılmasını kodlayınız.
 
-<img src="" width="250" height="500">
+<img src="https://github.com/beyzakoser/flutter-workshops/blob/main/workshop10/httpexample/img/img.png" width="250" height="500">
