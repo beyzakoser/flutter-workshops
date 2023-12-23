@@ -1,16 +1,15 @@
-# miniblog
+# Ödev 21.12.2023
+Blog detay sayfası ekleyiniz. Listeden tıklanan blogun detayı için id bilgisi bu sayfaya aktarılıp sayfa açıldığında o id ile web api'ye istek atılıp detaylar alınmalı ve istediğiniz bir tasarımla gösterilmeldir.
 
-A new Flutter project.
+## Çıktılar
 
-## Getting Started
+<p align="middle">
 
-This project is a starting point for a Flutter application.
+<img width="250" height="500" alt="miniblog1" src="https://github.com/beyzakoser/flutter-workshops/assets/32619670/2fc32114-0462-436e-a196-2b10ea62703e">
 
-A few resources to get you started if this is your first Flutter project:
+<img width="250" height="500" alt="miniblog2" src="https://github.com/beyzakoser/flutter-workshops/assets/32619670/27d95b03-29d4-4f8d-93df-8fa98b4a3ee8">
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img width="250" height="500" src="https://github.com/beyzakoser/flutter-workshops/assets/32619670/bd6ecff8-ff80-4f47-bcaf-c971b5739d9b">
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+</p>
