@@ -1,0 +1,61 @@
+//{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+//     "version": "0.2.0",
+//     // "configurations": [
+//     //     {
+//     //         "name": "flutterfirebase",
+//     //         "request": "launch",
+//     //         "type": "dart"
+//     //     },
+//     //     {
+//     //         "name": "flutterfirebase (profile mode)",
+//     //         "request": "launch",
+//     //         "type": "dart",
+//     //         "flutterMode": "profile"
+//     //     },
+//     //     {
+//     //         "name": "flutterfirebase (release mode)",
+//     //         "request": "launch",
+//     //         "type": "dart",
+//     //         "flutterMode": "release"
+//     //     }
+//     // ]
+// }
+// {
+//     "files.exclude": {
+//         ".dart_tool": false,
+//         "/.iml": true,
+//         "build": true,
+//     },
+//     "security.workspace.trust.enabled": false,
+//     "[dart]": {
+//         "editor.codeActionsOnSave": {
+//             "source.fixAll": "explicit"
+//         },
+//         "editor.rulers": [
+//             80
+//         ],
+//         "editor.defaultFormatter": "Dart-Code.dart-code",
+//         "editor.formatOnSave": true,
+//         "editor.formatOnType": true,
+//         "editor.selectionHighlight": false,
+//         "editor.suggest.snippetsPreventQuickSuggestions": false,
+//         "editor.suggestSelection": "first",
+//         "editor.tabCompletion": "onlySnippets",
+//         "editor.wordBasedSuggestions": "off",
+//     },
+//     "dart.previewFlutterUiGuides": true,
+//     "dart.warnWhenEditingFilesOutsideWorkspace": false,
+//     "dart.renameFilesWithClasses": "prompt",
+//     "editor.bracketPairColorization.enabled": true,
+//     "editor.inlineSuggest.enabled": true,
+//     "editor.formatOnSave": true,
+//     "editor.stickyScroll.enabled": true,
+//     "explorer.fileNesting.patterns": {
+//         ".dart": "${capture}.g.dart, ${capture}.config.dart,${capture}.routes.dart"
+//     },
+//     "explorer.fileNesting.enabled": true,
+//     "explorer.fileNesting.expand": false
+// }
